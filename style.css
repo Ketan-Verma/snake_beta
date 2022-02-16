@@ -1,15 +1,37 @@
 .card{
-    width: 20px;
-    height: 20px;
+    width: 1em;
+    height: 1em;
 }
 .grid{
     display: grid;
-    
     border: 1px solid;
     width: fit-content;
 }
+.lr{
+    display: flex;
+}
+button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica,"sans-serif";
+    transition: all .2s;
+    width: 5em;
+    margin: 1em;
+    padding: 10px 20px;
+   
+    background: #cfef00;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+   }
+   .btns{
+       align-items: center;
+       display: flex;
+       flex-direction: column;
+   }
 img{
-    height: 20px;
+    height: 100%;
 
 }
 *{
@@ -27,4 +49,11 @@ img{
 #clock{
     margin: 0 1em;
 
+}
+.instructions{
+    text-align: center;
+}
+.score{
+    text-align: center;
+    
 }
