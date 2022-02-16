@@ -182,3 +182,19 @@ function _up(){
         bcard(pos);    
     }
 }
+function up(){
+    _up();
+    dir="up";   
+}
+function right(){
+    _right();
+    dir="right";   
+}
+function left(){
+    _left();
+    dir="left";   
+}
+function down(){
+    _down();
+    dir="down";   
+}
