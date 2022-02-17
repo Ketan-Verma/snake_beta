@@ -80,7 +80,7 @@ function bcard(a){
     const foodCard =document.getElementById(food);
     document.querySelector("#clock").innerText = points ;
     foodCard.style.backgroundColor="green";
-    foodCard.innerHTML="<img src=\"/images/pineapple.png\" alt=\"\">";
+    // foodCard.innerHTML="<img src=\"/images/pineapple.png\" alt=\"\">";
     
 
 }
@@ -163,11 +163,18 @@ function _down(){
         pos += no_row;
         bcard(pos);    
     }
+    else{
+        pos-=numelem;
+    }
 }
 function _right(){
     if((pos+1<numelem+1) && !(pos%no_row == 0) ){
         pos += 1;
         bcard(pos);    
+    }
+    if(pos%no_row == 0){
+        pos-=no_row-1;
+        bcard(pos);
     }
 }
 function _left(){
@@ -175,11 +182,18 @@ function _left(){
         pos -= 1;
         bcard(pos);    
     }
+    if((pos-1)%no_row==0){
+        pos+=no_row-1;
+        bcard(pos);
+    }
 }
 function _up(){
     if(pos-no_row>0){
         pos -= no_row;
         bcard(pos);    
+    }
+    else{
+        pos += numelem;
     }
 }
 function up(){
